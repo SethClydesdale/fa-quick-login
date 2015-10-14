@@ -10,6 +10,4 @@ Then paste the [raw source](https://raw.githubusercontent.com/SethClydesdale/fa_
 
 Anyway, once the installation is finished the result should be similar to the following image, aside from the toolbar style.
 
-![preview](http://i21.servimg.com/u/f21/18/21/41/30/captu106.png)
-
-I'll most likely make some revisions later on, but it wont change too much.
+![preview](http://i21.servimg.com/u/f21/18/21/41/30/captu107.png)
