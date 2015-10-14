@@ -1,0 +1,92 @@
+/* dark theme */
+#fa_quick_login {
+  color:#FFF;
+  font-size:13px;
+  font-family:Arial, Verdana, Sans-serif;
+  background:#333;
+  border:1px solid #111;
+  border-radius:3px;
+  box-shadow:0 6px 12px rgba(0, 0, 0, 0.175);
+  margin-top:20px;
+  position:fixed;
+  z-index:40000;
+}
+
+#fa_quick_login:before {
+  content:url('http://i21.servimg.com/u/f21/18/21/41/30/arrd10.gif');
+  position:absolute;
+  right:15px;
+  top:-10px;
+}
+
+/* active color / toolbar login */
+#fa_right a.rightHeaderLink[href$="/login"] { padding:0 6px; }
+
+#fa_right a.rightHeaderLink.fa_login_actif {
+  color:#333 !important;
+  background-color:#FFF !important;
+}
+
+/* link colors */
+#fa_quick_login a.gensmall { color:#CCC }
+#fa_quick_login a.gensmall:hover { color:#FFF }
+
+/* text input */
+#fa_quick_login input {
+  color:#FFF;
+  background:#111;
+  border:1px solid #444;
+  border-radius:3px;
+  padding:3px;
+  margin:2px;
+  cursor:text;
+}
+
+#fa_quick_login input:hover { border-color:#666 }
+#fa_quick_login input:focus {
+  border-color:#999;
+  outline:none;
+}
+
+/* button style */
+#fa_quick_login input.mainoption {
+  color:#999;
+  border:1px solid #999;
+  background:none;
+  font-weight:bold;
+  display:block;
+  width:100%;
+  padding:6px 3px;
+  margin-top:10px;
+  cursor:pointer;
+  transition:300ms;
+}
+
+#fa_quick_login input.mainoption:hover {
+  color:#333;
+  background:#999;
+}
+
+#fa_quick_login input.mainoption:focus {
+  color:#333;
+  background:#FFF;
+  border-color:#FFF;
+}
+
+/* table reset */
+#fa_quick_login table.forumline, #fa_quick_login tr, #fa_quick_login td, #fa_quick_login th {
+  border:none !important;
+  background:none !important;
+  border-radius:0 !important;
+}
+
+#fa_quick_login .thHead {
+  color:#FFF;
+  font-size:13px;
+  font-family:"Trebuchet MS", Arial, Verdana, Sans-serif;
+}
+
+#fa_quick_login td {
+  font-size:13px;
+  padding:3px;
+}
