@@ -1,3 +1,4 @@
+/* forum des forums theme */
 #fa_quick_login {
   color:#333;
   font-size:13px;
@@ -15,7 +16,7 @@
   content:url('http://i21.servimg.com/u/f21/18/21/41/30/arrow10.gif');
   position:absolute;
   right:15px;
-  top:-9px;
+  top:-11px;
 }
 
 /* active color */
@@ -49,6 +50,7 @@
 #fa_quick_login input.mainoption {
   color:#39C;
   border:1px solid #39C;
+  background:none;
   font-weight:bold;
   display:block;
   width:100%;
