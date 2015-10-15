@@ -10,6 +10,7 @@
   margin-top:20px;
   position:fixed;
   z-index:40000;
+  width:400px;
 }
 
 #fa_quick_login:before {
@@ -78,6 +79,7 @@
   border:none !important;
   background:none !important;
   border-radius:0 !important;
+  white-space:normal;
 }
 
 #fa_quick_login .thHead {
