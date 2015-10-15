@@ -13,7 +13,7 @@
   };
   
   // quick login theme
-  document.write('<style type="text/css">#fa_quick_login{color:#333;font-size:13px;font-family:Arial,Verdana,Sans-serif;background:#FFF;border:1px solid #CCC;border-radius:3px;box-shadow:0 6px 12px rgba(0,0,0,.175);margin-top:20px;position:fixed;z-index:40000}#fa_quick_login:before{content:url(http://i21.servimg.com/u/f21/18/21/41/30/arr10.gif);position:absolute;right:15px;top:-10px}#fa_right a.rightHeaderLink[href$="/login"]{padding:0 6px}#fa_right a.rightHeaderLink.fa_login_actif{color:#333!important;background-color:#FFF!important}#fa_quick_login a.gensmall{color:#069}#fa_quick_login a.gensmall:hover{color:#333}#fa_quick_login input{color:#333;background:#FFF;border:1px solid #CCC;border-radius:3px;padding:3px;margin:2px;cursor:text}#fa_quick_login input:hover{border-color:#39C}#fa_quick_login input:focus{border-color:#333;outline:0}#fa_quick_login input.mainoption{color:#39C;border:1px solid #39C;background:0 0;font-weight:700;display:block;width:100%;padding:6px 3px;margin-top:10px;cursor:pointer;transition:300ms}#fa_quick_login input.mainoption:hover{color:#FFF;background:#39C}#fa_quick_login input.mainoption:focus{color:#FFF;background:#8B5;border-color:#8B5}#fa_quick_login table.forumline,#fa_quick_login td,#fa_quick_login th,#fa_quick_login tr{border:none!important;background:0 0!important;border-radius:0!important}#fa_quick_login .thHead{color:#333;font-size:13px;font-family:"Trebuchet MS",Arial,Verdana,Sans-serif}#fa_quick_login td{font-size:13px;padding:3px}</style>');
+  document.write('<style type="text/css">#fa_quick_login{color:#333;font-size:13px;font-family:Arial,Verdana,Sans-serif;background:#FFF;border:1px solid #CCC;border-radius:3px;box-shadow:0 6px 12px rgba(0,0,0,.175);margin-top:20px;position:fixed;z-index:40000;width:400px}#fa_quick_login:before{content:url(http://i21.servimg.com/u/f21/18/21/41/30/arr10.gif);position:absolute;right:15px;top:-10px}#fa_right a.rightHeaderLink[href$="/login"]{padding:0 6px}#fa_right a.rightHeaderLink.fa_login_actif{color:#333!important;background-color:#FFF!important}#fa_quick_login a.gensmall{color:#069}#fa_quick_login a.gensmall:hover{color:#333}#fa_quick_login input{color:#333;background:#FFF;border:1px solid #CCC;border-radius:3px;padding:3px;margin:2px;cursor:text}#fa_quick_login input:hover{border-color:#39C}#fa_quick_login input:focus{border-color:#333;outline:0}#fa_quick_login input.mainoption{color:#39C;border:1px solid #39C;background:0 0;font-weight:700;display:block;width:100%;padding:6px 3px;margin-top:10px;cursor:pointer;transition:300ms}#fa_quick_login input.mainoption:hover{color:#FFF;background:#39C}#fa_quick_login input.mainoption:focus{color:#FFF;background:#8B5;border-color:#8B5}#fa_quick_login table.forumline,#fa_quick_login td,#fa_quick_login th,#fa_quick_login tr{border:none!important;background:0 0!important;border-radius:0!important;white-space:normal}#fa_quick_login .thHead{color:#333;font-size:13px;font-family:"Trebuchet MS",Arial,Verdana,Sans-serif}#fa_quick_login td{font-size:13px;padding:3px}</style>');
 
   $(function() {
     if (!_userdata.session_logged_in && _userdata.activate_toolbar) {
@@ -27,24 +27,26 @@
         var right = document.getElementById('fa_right');
   
         if (right) {
-          right.firstChild.onclick = function(e) {
-            var login = document.getElementById('fa_quick_login'), offset = this.getBoundingClientRect();
-            
-            e.preventDefault();
+          right.firstChild.onclick = function() {
+            var login = document.getElementById('fa_quick_login'), offset = this.getBoundingClientRect(), loffset;
 
             if (login) {
               if (/none/.test(login.style.display)) {
                 login.style.display = '';
-                login.style.top = offset.top + 30 + 'px';
-                login.style.left = offset.left - (login.getBoundingClientRect().width - offset.width) + 'px';
-                login.getElementsByTagName('FORM')[0].username.focus();
                 
+                loffset = login.getBoundingClientRect();
+                login.style.top = offset.top + 30 + 'px';
+                login.style.left = offset.left - ((loffset.right - loffset.left) - (offset.right - offset.left)) + 'px';
+                
+                login.getElementsByTagName('FORM')[0].username.focus();
                 this.className += ' fa_login_actif';
               } else {
                 login.style.display = 'none';
                 this.className = this.className.replace(/fa_login_actif/, '');
               }
             }
+            
+            return false;
           };
         }
       });
