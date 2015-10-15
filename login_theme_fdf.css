@@ -4,7 +4,7 @@
   font-size:13px;
   font-family:Arial, Verdana, Sans-serif;
   background:#FFF;
-  border:1px solid #DDD;
+  border:1px solid #CCC;
   border-radius:3px;
   box-shadow:0 6px 12px rgba(0, 0, 0, 0.175);
   margin-top:20px;
@@ -14,10 +14,10 @@
 }
 
 #fa_quick_login:before {
-  content:url('http://i21.servimg.com/u/f21/18/21/41/30/arrow10.gif');
+  content:url('http://i21.servimg.com/u/f21/18/21/41/30/arrfdf10.gif');
   position:absolute;
   right:15px;
-  top:-11px;
+  top:-10px;
 }
 
 /* active color */
@@ -80,14 +80,11 @@
   white-space:normal;
 }
 
-#fa_quick_login table.forumline { margin:-1px; }
-
 #fa_quick_login .thHead {
   color:#FFF;
   font-size:13px;
   font-family:"Trebuchet MS", Arial, Verdana, Sans-serif;
   background:#39C !important;
-  border-radius:3px 3px 0 0 !important;
   padding:3px 6px;
 }
 
