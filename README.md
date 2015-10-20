@@ -8,6 +8,9 @@ This is a small plugin for the ForumActif toolbar which adds a quick login form 
 
 Then paste the [raw source](https://raw.githubusercontent.com/SethClydesdale/fa_quick_login/master/fa_quick_login.js) into the textarea and submit. There's no need to install the CSS since it's already included in the script, but you can remove the write and add the CSS to your sheet instead if you want.
 
-Anyway, once the installation is finished the result should be similar to the following image, aside from the toolbar style.
+For a more indepth tutorial please see the following link(s).
+- [English](http://help.forumotion.com/t143870-add-a-quick-login-form-to-the-toolbar#982173)
+
+Once the installation is finished the result should be similar to the following image, aside from the toolbar style.
 
 ![preview](http://i21.servimg.com/u/f21/18/21/41/30/captu107.png)
